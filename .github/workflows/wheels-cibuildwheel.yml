@@ -32,6 +32,7 @@ jobs:
           CIBW_ARCHS_LINUX: ppc64le
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
           CIBW_BUILD: cp37-manylinux_ppc64le
+          CIBW_SKIP: cp27-*
 
       - uses: actions/upload-artifact@v2
         with:
