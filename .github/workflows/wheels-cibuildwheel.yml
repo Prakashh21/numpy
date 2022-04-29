@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v2
         name: Install Python
         with:
-          python-version: '3.7'
+          python-version: '3.8'
 
       - name: Set up QEMU
         if: runner.os == 'Linux'
@@ -31,7 +31,7 @@ jobs:
           # emulated ones
           CIBW_ARCHS_LINUX: ppc64le
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
-          CIBW_BUILD: cp37-manylinux_ppc64le
+          CIBW_BUILD: cp38-manylinux_ppc64le
           CIBW_SKIP: cp36-*
 
       - uses: actions/upload-artifact@v2
